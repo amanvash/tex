@@ -1,98 +1,70 @@
 <html>
 <title>Canva</title>
 <style>
-div {
+
   
+  @font-face {
+  font-family: my;
+  src: url(/avs.ttf);
 }
 
+div {
+  font-family: my;
+}
+  
+ 
 body {
-  background: rgb(204,204,204); 
+  margin: 0;
+  padding: 0;
+  background: rgba(255,255,255,1);
 }
-page {
-  background-image: url('https://i.pinimg.com/originals/54/14/c7/5414c70e4a396d6d96f0a9d0114723ab.jpg');
-  background-size: 120%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+.paper {
+  position: absolute;
+  height: 700px;
+  width: 600px;
+  background: rgba(255,255,255,1);
+  margin: -275px -225px;
+  left: 50%;
+  top: 40%;
+  box-shadow: 0px 0px 9px 0px #888;
 }
-page[size="A4"] {  
-  width: 21cm;
-  height: 29.7cm; 
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 1px;
+  background: rgba(128,0,128,0.4);
 }
-page[size="A4"][layout="landscape"] {
-  width: 29.7cm;
-  height: 21cm;  
+.lines {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
 }
-page[size="A3"] {
-  width: 29.7cm;
-  height: 42cm;
-}
-page[size="A3"][layout="landscape"] {
-  width: 42cm;
-  height: 29.7cm;  
-}
-page[size="A5"] {
-  width: 14.8cm;
-  height: 21cm;
-}
-page[size="A5"][layout="landscape"] {
-  width: 21cm;
-  height: 14.8cm;  
-}
-@media print {
-  body, page {
-    margin: 0;
-    box-shadow: 0;
-  }
+.text {
+  position: absolute;
+  top: 48px;
+  left: 55px;
+  bottom: 1px;
+  right: 10px;
+  line-height: 25px;
+  font-family: 'my';
+  overflow: hidden;
+  outline: none;
 }
 
-23237006
 
-
-</style>
+  </style>
 <body>
-<page size="A4"></page>
-<textarea id="document.getElementById(id)"  rows="4" cols="50">
-At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-</textarea>
-<page size="A4"></page>
 
-<!--
-<page size="A4" layout="landscape"></page>
-<page size="A5"></page>
-<page size="A5" layout="landscape"></page>
-<page size="A3"></page>
-<page size="A3" layout="landscape"></page>
--->
-<?php
-
-function FitToContent(id, maxHeight)
-{
-   var text = id && id.style ? id : document.getElementById(id);
-   if ( !text )
-      return;
-
-   var adjustedHeight = text.clientHeight;
-   if ( !maxHeight || maxHeight > adjustedHeight )
-   {
-      adjustedHeight = Math.max(text.scrollHeight, adjustedHeight);
-      if ( maxHeight )
-         adjustedHeight = Math.min(maxHeight, adjustedHeight);
-      if ( adjustedHeight > text.clientHeight )
-         text.style.height = adjustedHeight + "px";
-   }
-}
-
-window.onload = function() {
-    document.getElementById("ta").onkeyup = function() {
-      FitToContent( this, 500 )
-    };
-}
-
-
-
->
-
+<div class="paper">
+  <div class="lines">
+    <div class="text" contenteditable spellcheck="false">
+      This can be the title <br />
+      Hello I am Vashishth and this is totlaly developed by me</div>
+  </div>
+  
+</div>
 </body>
 </html>
