@@ -90,7 +90,7 @@ footer a {
 
 <div class="paper">
     <div class="paper-content">
-        <textarea autofocus>Hello world !&#10;Here's a paper textarea tag.</textarea>
+        <textarea autofocus>Hello world !&#10;Here you can write.</textarea>
     </div>
 </div>
     
