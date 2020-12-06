@@ -60,13 +60,13 @@ body {
     height: 100%;
     max-height: 100%;
     line-height: 30px;
-    padding: 0px;
+    padding: 0 10px;                               
     border: 0;
     outline: 0;
     background: transparent;
-    color: mediumblue;
+    color: #16035c;
     font-family: 'my';
-    font-size: 26px;
+    font-size: 18px;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -80,6 +80,7 @@ footer {
 footer a {
     color: rgba(255,255,255,.8);
 }
+
 
 
 
