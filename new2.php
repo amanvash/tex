@@ -7,6 +7,7 @@
 <style>
 
 
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
 @font-face {
@@ -17,12 +18,13 @@ div {
   font-family: my;
 }
 :root{
-   --fontfp: 'my';
+   --fontfp: 'Handlee', cursive;
     --ver: -24px;
     --ink: #16035c;
-    --fontsz: 28px;
+    --fontsz: 18px;
 }
-.console{
+
+.console1{
 
 			background: #4CAF50;
   border:solid 0px #009B1C;
@@ -32,7 +34,34 @@ div {
   
        
 }
+.console2{
 
+		width: 15%;
+  padding: 5px 4px;
+  margin: 2px 0;
+  border-radius:50px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  background-color: #CC3399;
+  color: white;
+  
+       
+}
+.console3{
+
+		width: 15%;
+  padding: 5px 4px;
+  margin: 2px 0;
+  border-radius:50px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  background-color: #ff6600;
+  color: white;
+  
+       
+}
 body {
     margin: 40px 0 10;
     background: #91D1D3;
@@ -155,8 +184,9 @@ footer a {
       display: block;
        margin-left: auto;
        margin-right: auto;
+           margin-top: 5%;
        
-       width: 26%;
+       width: 46%;
 			padding: 5px;
           margin-bottom: 1.8%;
 			border-radius:7px;
@@ -173,9 +203,33 @@ footer a {
 		}
 
 
+/*Tooltip poup on hover*/
+.tooltip {
+  position: relative;
 
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #2196F3;
+  color: #fff;
+  text-align: center;
+  border-radius: 31px;
+  padding: 6px 0;
+  margin-bottom: 7px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
 
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 
 </style>
@@ -186,11 +240,18 @@ footer a {
 
 <div class="sample-toolbar">
 		<a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
-  		<a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
+  
+		<a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw "></span></a>
 		<a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
-  <input class="console" type="color" id="pen" value="#16035c">
+ <a class="tooltip"> <span class="tooltiptext">Text Color</span>
+  <input class="console1" type="color" id="pen" value="#16035c">
+  <a class="tooltip"> <span class="tooltiptext">Vertical Position</span>
+   <input class="console2" type="float" id="verp" value="-24px">
+    <a class="tooltip"> <span class="tooltiptext">Font Size</span>
+   <input class="console3" type="float" id="fonts" value="28px">
 	
 </div>
+
 
 <div class="paper">
       <div class="paper-content">
@@ -209,7 +270,7 @@ footer a {
 	
 <script>
 	
-	window.addEventListener('load', function(){
+		window.addEventListener('load', function(){
 			document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
 			
         });
@@ -224,6 +285,21 @@ let pencolor =
 pencolor.addEventListener('change',(e)=>{
   console.log(e.target.value)
   document.documentElement.style.setProperty('--ink',e.target.value)
+})
+
+
+let verpos = 
+    document.getElementById('verp')
+verpos.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--ver',e.target.value)
+})
+
+let fontz = 
+    document.getElementById('fonts')
+fontz.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--fontsz',e.target.value)
 })
 
 </script>	
