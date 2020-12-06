@@ -12,28 +12,12 @@ div {
   font-family: my;
 }
   
-  /* CSS Variables */
-body {
-  --background-primary: #fff;
-  --font-color-primary: #333;
-  --elevation-background: #f3f3f3;
-  --link-color: #006eb8;
-  --fontfp: 'my';
-  --handwriting-font: 'Homemade Apple', cursive;
-  --primary-color: #1a73e8;
-  --ink-color: #000f55;
-  --label-color: #333;
-  --field-borders: #e0e0e0;
-  --primary-button-bg: #1d1d1d;
-  --primary-button-color: #eee;
-  --font-color-delete: #dc3545;
-  --delete-button-borders: #dc3545;
-  
-  
 
 body {
     margin: 40px 0 0;
     background: #91D1D3;
+    --fontfp: 'my';
+    
     
 }
 
