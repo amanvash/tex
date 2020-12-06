@@ -22,6 +22,7 @@ body {
     --fontfp: 'my';
     --ver: 37px;
     --ink: #16035c;
+    --fontsz: 32px;
     
     
 }
@@ -72,9 +73,13 @@ body {
     border: 0;
     outline: 0;
     background: transparent;
+  
     color: var(--ink); /*Ink color*/
+  
     font-family: var(--fontfp); /*Font*/
-    font-size: 32px;
+  
+    font-size: var(--fontsz); /*Font Size*/
+  
     box-sizing: border-box;
     z-index: 1;
 }
