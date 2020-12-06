@@ -18,7 +18,7 @@ div {
   font-family: my;
 }
 :root{
-   --fontfp: 'Handlee', cursive;
+   --fontfp: 'my';
     --ver: -24px;
     --ink: #16035c;
     --fontsz: 18px;
