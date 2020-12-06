@@ -134,10 +134,19 @@ footer a {
 
         .sample-toolbar
         {
-			border:solid 1px #ddd;
-			background:#f4f4f4;
+			border:solid 1px #009B1C;
+			background: #4CAF50;
+     text-align: center;
+   display: inline-block;
+  
+      display: block;
+       margin-left: 57%;
+       margin-right: auto;
+       
+       width: 36%;
 			padding: 5px;
-			border-radius:3px;
+          margin-bottom: 1.8%;
+			border-radius:7px;
         }
 
         .sample-toolbar > span
@@ -149,10 +158,6 @@ footer a {
         {
 			text-decoration:underline;
 		}
-
-
-
-
 
 
 </style>
