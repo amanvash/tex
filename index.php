@@ -48,7 +48,7 @@ body {
   left: 55px;
   bottom: 1px;
   right: 10px;
-  line-height: 25px;
+  line-height: 15px;
   font-family: 'my';
   overflow: hidden;
   outline: none;
