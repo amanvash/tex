@@ -50,6 +50,21 @@ body {
     border-right: 2px solid #FFB6C1;
     box-sizing: border-box;
 }
+  .paper:after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    top: 5.7%;
+  
+
+    background-size: 30px 30px;
+    border-top: 2.5px solid #FFB6C1;
+    box-sizing: border-box;
+  
+}
+
+  
 
 .paper-content {
     position: absolute;
