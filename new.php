@@ -29,7 +29,7 @@ body {
     background: #fafafa;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
-    overflow: hidden;
+    
    
 }
 .paper:before {
@@ -60,13 +60,12 @@ body {
     height: 100%;
     max-height: 100%;
     line-height: 30px;
-    padding: 0 10px;
+    padding: 0px;
     border: 0;
     outline: 0;
     background: transparent;
     color: mediumblue;
     font-family: 'my';
-    font-weight: ;
     font-size: 26px;
     box-sizing: border-box;
     z-index: 1;
