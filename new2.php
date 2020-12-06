@@ -1,5 +1,7 @@
 <html>
 <title>Vashx</title>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
 <style>
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -14,18 +16,20 @@ div {
   
 
 body {
-    margin: 40px 0 0;
+    margin: 40px 0 10;
     background: #91D1D3;
   
       /*Variables*/
   
-    --fontfp: 'my';
-    --ver: 37px;
+    --fontfp:'my';
+    --ver: -24px;
     --ink: #16035c;
-    --fontsz: 28px;
+    --fontsz: 18px;
     
     
 }
+
+
 
 .paper {
     position: relative;
@@ -55,7 +59,7 @@ body {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     width: 100%;
-    top: 5.3%;
+    top: 6.2%;
   
 
     background-size: 30px 30px;
@@ -68,25 +72,26 @@ body {
 
 .paper-content {
     position: absolute;
-    top: 30px; right: 0; bottom: 30px; left: 0px;
+    top: 40px; right: 0; bottom: 30px; left: 0px;
  
     background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
     background-size: 30px 30px;
 }
 
-.paper-content textarea {
-  position: absolute;
-  top: var(--ver); /*Vertical Position*/
-  right: 0; bottom: 30px; left: 65px;
+
+  
+
+.paper-content div {
  
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
+  
+  right: 0px; bottom: 30px; left:0px;
+ 
+    
+    
+     
     line-height: 30px;
-    padding: 0 15px;                               
-    border: 0;
-    outline: 0;
+    padding: 0 8px;                               
+
     background: transparent;
   
     color: var(--ink); /*Ink color*/
@@ -109,6 +114,42 @@ footer a {
     color: rgba(255,255,255,.8);
 }
 
+.editor
+        {
+       border: 0px inset grey;
+      height: 100px;
+      width: 720px;
+      margin: var(--ver); 
+         margin-left: 64px;
+     
+     
+   
+     
+    
+			border:solid 0px #ccc;
+		
+        }
+
+        .sample-toolbar
+        {
+			border:solid 1px #ddd;
+			background:#f4f4f4;
+			padding: 5px;
+			border-radius:3px;
+        }
+
+        .sample-toolbar > span
+        {
+			cursor:pointer;
+		}
+
+        .sample-toolbar > span:hover
+        {
+			text-decoration:underline;
+		}
+
+
+
 
 
 
@@ -116,12 +157,23 @@ footer a {
 <body>
 
 
+<div class="sample-toolbar">
+		<a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
+		<a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
+		<a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
+		<a href="javascript:void(0)" onclick="setUrl()"><span class="fa fa-link fa-fw"></span></a>
+		<span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
+</div>
+
 <div class="paper">
-    <div class="paper-content">
-        <textarea autofocus>Hello world !&#10;Here you can write.</textarea>
+      <div class="paper-content">
+          
+      <div class="editor"  contenteditable="true" id="sampleeditor">
+	</div>
+      
     </div>
 </div>
     
 <footer>
-   Vashishth @ VashX
+    Ins
 </footer>
