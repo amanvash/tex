@@ -32,7 +32,7 @@ body {
     width: 90%;
     max-width: 770px;
     min-width: 770px;
-    height: 1000px;
+    height: calc(11.7 * 770px / 8.3); /* A4 Ratio */
     margin: 0 auto;
     background: #fafafa;
     border-radius: 10px;
