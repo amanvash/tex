@@ -4,6 +4,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
+@font-face {
+  font-family: my;
+  src: url(/avs.ttf);
+}
+div {
+  font-family: my;
+}
+  
 
 body {
     margin: 40px 0 0;
@@ -57,9 +65,9 @@ body {
     outline: 0;
     background: transparent;
     color: mediumblue;
-    font-family: 'Handlee', cursive;
-    font-weight: bold;
-    font-size: 18px;
+    font-family: 'my';
+    font-weight: ;
+    font-size: 26px;
     box-sizing: border-box;
     z-index: 1;
 }
