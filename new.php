@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     width: 100%;
-    top: 5.3%;
+    top: 6.2%;
   
 
     background-size: 30px 30px;
@@ -68,7 +68,7 @@ body {
 
 .paper-content {
     position: absolute;
-    top: 30px; right: 0; bottom: 30px; left: 0px;
+    top: 40px; right: 0; bottom: 30px; left: 0px;
  
     background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
     background-size: 30px 30px;
