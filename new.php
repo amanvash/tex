@@ -22,8 +22,8 @@ body {
 .paper {
     position: relative;
     width: 90%;
-    max-width: 800px;
-    min-width: 800px;
+    max-width: 770px;
+    min-width: 770px;
     height: 1000px;
     margin: 0 auto;
     background: #fafafa;
