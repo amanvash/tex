@@ -47,7 +47,7 @@ body {
     width: 65px;
 
     background-size: 30px 30px;
-    border-right: 2.5px solid #FFB6C1;
+    border-right: 2.5px solid #a82793;
     box-sizing: border-box;
 }
   .paper:after {
@@ -59,7 +59,7 @@ body {
   
 
     background-size: 30px 30px;
-    border-top: 2.5px solid #FFB6C1;
+    border-top: 2.5px solid #a82793;
     box-sizing: border-box;
   
 }
