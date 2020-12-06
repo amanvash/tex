@@ -132,6 +132,7 @@ footer a {
 		
         }
 
+       
         .sample-toolbar
         {
 			border:solid 1px #009B1C;
@@ -140,7 +141,7 @@ footer a {
    display: inline-block;
   
       display: block;
-       margin-left: 57%;
+       margin-left: auto;
        margin-right: auto;
        
        width: 36%;
@@ -158,6 +159,9 @@ footer a {
         {
 			text-decoration:underline;
 		}
+
+
+
 
 
 </style>
