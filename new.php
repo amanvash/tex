@@ -66,7 +66,7 @@ body {
     background: transparent;
     color: #16035c;
     font-family: 'my';
-    font-size: 18px;
+    font-size: 32px;
     box-sizing: border-box;
     z-index: 1;
 }
