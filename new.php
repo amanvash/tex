@@ -22,7 +22,7 @@ body {
     --fontfp: 'my';
     --ver: 37px;
     --ink: #16035c;
-    --fontsz: 32px;
+    --fontsz: 28px;
     
     
 }
