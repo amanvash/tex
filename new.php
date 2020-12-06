@@ -17,6 +17,7 @@ body {
     margin: 40px 0 0;
     background: #91D1D3;
     --fontfp: 'my';
+    --ver: 37px;
     
     
 }
@@ -55,7 +56,8 @@ body {
 
 .paper-content textarea {
   position: absolute;
-    top: 36px; right: 0; bottom: 30px; left: 62px;
+  top: var(--ver); /*Vertical Position*/
+  right: 0; bottom: 30px; left: 62px;
  
     width: 100%;
     max-width: 100%;
@@ -67,7 +69,7 @@ body {
     outline: 0;
     background: transparent;
     color: #16035c;
-    font-family: var(--fontfp);
+    font-family: var(--fontfp); /*Font*/
     font-size: 32px;
     box-sizing: border-box;
     z-index: 1;
