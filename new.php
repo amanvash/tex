@@ -44,7 +44,7 @@ body {
     content: '';
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    width: 65px;
+    width: 75px;
 
     background-size: 30px 30px;
     border-right: 2.5px solid #DB7093;
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     width: 100%;
-    top: 5.8%;
+    top: 5.3%;
   
 
     background-size: 30px 30px;
@@ -77,14 +77,14 @@ body {
 .paper-content textarea {
   position: absolute;
   top: var(--ver); /*Vertical Position*/
-  right: 0; bottom: 30px; left: 62px;
+  right: 0; bottom: 30px; left: 65px;
  
     width: 100%;
     max-width: 100%;
     height: 100%;
     max-height: 100%;
     line-height: 30px;
-    padding: 0 10px;                               
+    padding: 0 15px;                               
     border: 0;
     outline: 0;
     background: transparent;
