@@ -48,8 +48,9 @@ body {
   left: 55px;
   bottom: 1px;
   right: 10px;
-  line-height: 15px;
+  line-height: 26px;
   font-family: 'my';
+  font-size: 26px;
   overflow: hidden;
   outline: none;
 }
