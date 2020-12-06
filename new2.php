@@ -188,3 +188,30 @@ footer a {
 <footer>
     Ins
 </footer>
+	
+	
+	
+<script>window.addEventListener('load', function(){
+			document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
+			
+        });
+
+		function format(command, value) {
+			document.execCommand(command, false, value);
+		}
+
+		function setUrl() {
+			var url = document.getElementById('txtFormatUrl').value;
+			var sText = document.getSelection();
+			document.execCommand('insertHTML', false, '<a href="' + url + '" target="_blank">' + sText + '</a>');
+			document.getElementById('txtFormatUrl').value = '';
+		}
+document.querySelector("#main-header");
+header.style.setProperty("--header-bg-color", boxMainColor);
+let pencolor = 
+    document.getElementById('pen')
+pencolor.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--ink',e.target.value)
+})
+</script>	
