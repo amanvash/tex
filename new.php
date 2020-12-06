@@ -16,8 +16,12 @@ div {
 body {
     margin: 40px 0 0;
     background: #91D1D3;
+  
+      /*Variables*/
+  
     --fontfp: 'my';
     --ver: 37px;
+    --ink: #16035c;
     
     
 }
@@ -68,7 +72,7 @@ body {
     border: 0;
     outline: 0;
     background: transparent;
-    color: #16035c;
+    color: var(--ink); /*Ink color*/
     font-family: var(--fontfp); /*Font*/
     font-size: 32px;
     box-sizing: border-box;
