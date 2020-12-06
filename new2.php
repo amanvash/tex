@@ -6,6 +6,7 @@
 </head>
 <style>
 
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
 @font-face {
@@ -15,7 +16,22 @@
 div {
   font-family: my;
 }
+:root{
+   --fontfp: 'my';
+    --ver: -24px;
+    --ink: #16035c;
+    --fontsz: 28px;
+}
+.console{
+
+			background: #4CAF50;
+  border:solid 0px #009B1C;
+			background: #4CAF50;
+     text-align: center;
+   display: inline-block;
   
+       
+}
 
 body {
     margin: 40px 0 10;
@@ -23,10 +39,7 @@ body {
   
       /*Variables*/
   
-    --fontfp:'my';
-    --ver: -24px;
-    --ink: #16035c;
-    --fontsz: 18px;
+   
     
     
 }
@@ -132,7 +145,6 @@ footer a {
 		
         }
 
-       
         .sample-toolbar
         {
 			border:solid 1px #009B1C;
@@ -144,7 +156,7 @@ footer a {
        margin-left: auto;
        margin-right: auto;
        
-       width: 36%;
+       width: 26%;
 			padding: 5px;
           margin-bottom: 1.8%;
 			border-radius:7px;
@@ -164,16 +176,20 @@ footer a {
 
 
 
+
+
 </style>
 <body>
 
 
+
+
 <div class="sample-toolbar">
 		<a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
-		<a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
+  		<a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
 		<a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
-		<a href="javascript:void(0)" onclick="setUrl()"><span class="fa fa-link fa-fw"></span></a>
-		<span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
+  <input class="console" type="color" id="pen" value="#16035c">
+	
 </div>
 
 <div class="paper">
@@ -191,7 +207,9 @@ footer a {
 	
 	
 	
-<script>window.addEventListener('load', function(){
+<script>
+	
+	window.addEventListener('load', function(){
 			document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
 			
         });
@@ -200,18 +218,12 @@ footer a {
 			document.execCommand(command, false, value);
 		}
 
-		function setUrl() {
-			var url = document.getElementById('txtFormatUrl').value;
-			var sText = document.getSelection();
-			document.execCommand('insertHTML', false, '<a href="' + url + '" target="_blank">' + sText + '</a>');
-			document.getElementById('txtFormatUrl').value = '';
-		}
-document.querySelector("#main-header");
-header.style.setProperty("--header-bg-color", boxMainColor);
+	
 let pencolor = 
     document.getElementById('pen')
 pencolor.addEventListener('change',(e)=>{
   console.log(e.target.value)
   document.documentElement.style.setProperty('--ink',e.target.value)
 })
+
 </script>	
