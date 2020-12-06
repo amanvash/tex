@@ -55,7 +55,7 @@ body {
 
 .paper-content textarea {
   position: absolute;
-    top: 30px; right: 0; bottom: 30px; left: 62px;
+    top: 36px; right: 0; bottom: 30px; left: 62px;
  
     width: 100%;
     max-width: 100%;
