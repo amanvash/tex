@@ -47,7 +47,7 @@ body {
     width: 65px;
 
     background-size: 30px 30px;
-    border-right: 2px solid #FFB6C1;
+    border-right: 2.5px solid #FFB6C1;
     box-sizing: border-box;
 }
   .paper:after {
