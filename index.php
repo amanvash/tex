@@ -371,7 +371,19 @@ footer a {
   <img onclick="runSpeechRecognition()"  src="http://projtex.herokuapp.com/mic.png" class="console6" />
    &nbsp; <span class="span2" id="action"></span>
 
-
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script>function doCapture(){
+      html2canvas(document.getElementById("paper")).then(function(canvas){console.log(canvas.toDataURL("image/jpeg",0.9));
+        
+      });
+      
+    }
+  </script>
+  <button onclick="doCapture();">Capture</button>
+	
+	
+	
+<section id="paper"> 	
 <div class="paper">
       <div class="paper-content">
           
@@ -380,6 +392,10 @@ footer a {
       
     </div>
 </div>
+</section>	
+	
+	
+	
     <div id="acc" class="sample-toolbar" ></div>
 <footer>
   ir
