@@ -7,7 +7,6 @@
 <style>
 
 
-
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
 @font-face {
@@ -18,10 +17,12 @@ div {
   font-family: my;
 }
 :root{
-   --fontfp: 'my';
+   --fontfp: 'Handlee', cursive;
     --ver: -24px;
     --ink: #16035c;
     --fontsz: 18px;
+    --spac: 0px;
+   --lspac: 0px;
 }
 
 .console1{
@@ -59,19 +60,54 @@ div {
   border: none;
   background-color: #ff6600;
   color: white;
-  
-       
 }
+.console4{
+
+		width: 15%;
+  padding: 5px 4px;
+  margin: 2px 0;
+  border-radius:50px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  background-color: #00bfff;
+  color: white;
+}
+.console5{
+
+		width: 15%;
+  padding: 5px 4px;
+  margin: 2px 0;
+  border-radius:50px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  background-color: #d92626;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
 body {
     margin: 40px 0 10;
     background: #91D1D3;
   
-      /*Variables*/
-  
-   
-    
+      /*Variables*/ 
     
 }
+
+.space {
+  word-spacing: var(--spac);
+  letter-spacing: var(--lspac);
+}
+
 
 
 
@@ -186,7 +222,7 @@ footer a {
        margin-right: auto;
            margin-top: 5%;
        
-       width: 46%;
+       width: 56%;
 			padding: 5px;
           margin-bottom: 1.8%;
 			border-radius:7px;
@@ -232,7 +268,6 @@ footer a {
 }
 
 /*Drop Down*/
-	
 .dropbtn {
   background-color: #cc99ff;
   border-radius:50px;
@@ -296,14 +331,21 @@ footer a {
   </select>
 </div>
       
+         
+<a class="tooltip"> <span class="tooltiptext">Word Spacing</span>
+   <input class="console4" type="float" id="spc" value="0px">
+ <a class="tooltip"> <span class="tooltiptext">Letter Spacing</span>
+   <input class="console5" type="float" id="lspc" value="0px">
+      
 	
 </div>
+
 
 
 <div class="paper">
       <div class="paper-content">
           
-      <div class="editor"  contenteditable="true" id="sampleeditor">
+      <div class="editor space"  contenteditable="true" id="sampleeditor">
 	</div>
       
     </div>
@@ -356,6 +398,21 @@ let fonttp =
 fonttp.addEventListener('change',(e)=>{
   console.log(e.target.value)
   document.documentElement.style.setProperty('--fontfp',e.target.value)
+})
+
+	
+	let spce = 
+    document.getElementById('spc')
+spce.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--spac',e.target.value)
+})
+
+let lspce = 
+    document.getElementById('lspc')
+lspce.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--lspac',e.target.value)
 })
 
 
