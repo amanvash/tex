@@ -7,6 +7,7 @@
 <style>
 
 
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
 @font-face {
@@ -17,10 +18,10 @@ div {
   font-family: my;
 }
 :root{
-   --fontfp: 'Handlee', cursive;
+   --fontfp: 'my';
     --ver: -24px;
     --ink: #16035c;
-    --fontsz: 18px;
+    --fontsz: 28px;
     --spac: 0px;
    --lspac: 0px;
 }
@@ -85,7 +86,19 @@ div {
   background-color: #d92626;
   color: white;
 }
+.console6{
 
+		
+  padding: 5px 52px;
+  margin: 0px 40x;
+  margin-top: -65px;
+  height : 52px;
+  float: right;
+  
+ 
+ 
+  color: white;
+}
 
 
 
@@ -148,7 +161,7 @@ body {
   
 }
 
-  
+ 
 
 .paper-content {
     position: absolute;
@@ -197,16 +210,16 @@ footer a {
 .editor
         {
        border: 0px inset grey;
-      height: 100px;
+      height: 600px;
       width: 720px;
       margin: var(--ver); 
-         margin-left: 64px;
+         margin-left: 68px;
      
      
    
      
     
-			border:solid 0px #ccc;
+			
 		
         }
 
@@ -303,6 +316,23 @@ footer a {
   background-color: #3e8e41;
 }
 
+
+
+
+
+/*speech*/
+
+.span2 {
+  float: right;
+  padding-right: 2.5%;
+  
+  font-size: 10;
+  font-family: 'Trebuchet MS', sans-serif;
+  line-height: 20%;
+}
+
+
+
 </style>
 <body>
 
@@ -320,26 +350,27 @@ footer a {
    <input class="console2" type="float" id="verp" value="-24px">
     <a class="tooltip"> <span class="tooltiptext">Font Size</span>
    <input class="console3" type="float" id="fonts" value="28px">
-	     
-	    
-	        
- <a class="tooltip"> <span class="tooltiptext">Font</span>
+       <a class="tooltip"> <span class="tooltiptext">Font</span>
   <div class="dropdown">
   <select id="fonttype" class="dropbtn">
   <option value="'my'">My</option>
   <option value="'handlee'">Handlee</option>
   </select>
 </div>
-      
+  
          
 <a class="tooltip"> <span class="tooltiptext">Word Spacing</span>
    <input class="console4" type="float" id="spc" value="0px">
  <a class="tooltip"> <span class="tooltiptext">Letter Spacing</span>
    <input class="console5" type="float" id="lspc" value="0px">
-      
+    
+   
+   
 	
 </div>
 
+  <img onclick="runSpeechRecognition()"  src="http://projtex.herokuapp.com/mic.png" class="console6" />
+   &nbsp; <span class="span2" id="action"></span>
 
 
 <div class="paper">
@@ -350,9 +381,9 @@ footer a {
       
     </div>
 </div>
-    
+    <div id="acc" class="sample-toolbar" ></div>
 <footer>
-    Ins
+    Vashishth @ VashX
 </footer>
 	
 	
@@ -415,5 +446,39 @@ lspce.addEventListener('change',(e)=>{
   document.documentElement.style.setProperty('--lspac',e.target.value)
 })
 
+/* Text to speech */
+		    function runSpeechRecognition() {
+		        // get output div reference
+		        var sampleeditor = document.getElementById("sampleeditor");
+            //get accuracy below
+          var acc = document.getElementById("acc")
+		        // get action element reference
+		        var action = document.getElementById("action");
+                // new speech recognition object
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+            
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<small>listening...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+                    action.innerHTML = "<small>stopped listening.</small>";
+                    recognition.stop();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    var transcript = event.results[0][0].transcript;
+                    var confidence = event.results[0][0].confidence;
+                    sampleeditor.innerHTML =  transcript 
+                   acc.innerHTML = "<br/> <b>Speech Accuracy:</b> " + confidence*100+"%";
+                    sampleeditor.classList.remove("hide");
+                };
+              
+                 // start recognition
+                 recognition.start();
+	        }
 
 </script>	
