@@ -232,10 +232,11 @@ footer a {
 }
 
 /*Drop Down*/
+	
 .dropbtn {
   background-color: #cc99ff;
   border-radius:50px;
-  width: 150%;
+  width: 100%;
   color: white;
   padding: 5px;
   font-size: 14px;
@@ -248,18 +249,11 @@ footer a {
   display: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 1px 1px;
   text-decoration: none;
   display: block;
 }
@@ -293,15 +287,15 @@ footer a {
    <input class="console3" type="float" id="fonts" value="28px">
 	     
 	    
-	    
-	    
-<div class="dropdown">
-  <button class="dropbtn">Font</button>
-  <div class="dropdown-content">
-  <a href="#">My</a>
-  <a href="#">Handlee</a>
-  </div>
+	        
+ <a class="tooltip"> <span class="tooltiptext">Font</span>
+  <div class="dropdown">
+  <select id="fonttype" class="dropbtn">
+  <option value="'my'">My</option>
+  <option value="'handlee'">Handlee</option>
+  </select>
 </div>
+      
 	
 </div>
 
@@ -354,5 +348,15 @@ fontz.addEventListener('change',(e)=>{
   console.log(e.target.value)
   document.documentElement.style.setProperty('--fontsz',e.target.value)
 })
+	
+
+
+let fonttp = 
+    document.getElementById('fonttype')
+fonttp.addEventListener('change',(e)=>{
+  console.log(e.target.value)
+  document.documentElement.style.setProperty('--fontfp',e.target.value)
+})
+
 
 </script>	
