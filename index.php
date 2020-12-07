@@ -374,7 +374,7 @@ footer a {
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   <script>function doCapture(){
 		      window.scrollTo(0, 2);
-      html2canvas(document.getElementById("paper")).then(function(canvas){console.log(canvas.toDataURL("image/jpeg",1));
+      html2canvas(document.getElementById("paper")).then(function(canvas){console.log(canvas.toDataURL("image/jpeg",0.9));
         
       });
       
